@@ -1,61 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>レジメサイト</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
-<style>
-*{
-margin:0;
-padding:0;    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レジメサイト</title>
+    <!-- ここでGoogleフォントを読み込ませる -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin:0;
+    padding:0;
 }
-.m-plus-rounded-1c-regular {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.top h1{
-font-size:8rem;
-color:hotpink;
-padding-top:30vh;
-animation:ishikawa 3s forwards;
-opacity:0;
-}
-@keyframes ishikawa {
-0%{
-opacity:0;
-transform:translateY(100px);
-}
-100%{
-opacity:1;
-transform:translateY(0px);
-}
-}
-
-.top{
-background-color:aquamarine;  
-background-image:url(banana.jpg);  
-background-size:cover;
-background-repeat:no-repeat;
-text-align:center;
-}    
 .prof{
-background-color:aqua;        
+    background-color: #515151;
+    text-align: center;
 }
 section{
-height:100vh;    
+    height:100vh;
 }
-</style>
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.header h1{
+    font-size: 7rem;
+    color: #ffffff;
+    animation:kiyasu 3s forwards;
+    opacity: 0;
+}
+video{
+
+}
+header video{
+    object-fit: cover;
+    object-position: center top;
+}
+.prof h2{
+    font-size: 5rem;
+    color: #fff;
+    padding-top: 10vh;
+}
+.box {
+    width: 60vw;
+    height: 60vh;
+    background-color: #ed5959;
+    color: #fff;
+    margin: 0 auto;
+}
+header{
+position:relative;
+margin-bottom:5rem;    
+}
+.header-text{
+position:absolute;
+top:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+.header video{
+object-fit:cover;    
+object-position:center top;
+}
+
+.header-text,
+header video{
+width:100vw; 
+height:90vh;
+}
+@keyframes kiyasu {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transform: scale(1.8);
+        color:rgb(156, 255, 250);
+    }
+}
+@keyframes op {
+    0%{
+        transform: translateY(0);
+        transform-origin: top;
+    }
+    100%{
+        transform: translateY(0);
+        transform-origin: bottom;
+    }
+}
+    </style>
 </head>
 <body>
-<section class="top">
-<h1 class="m-plus-rounded-1c-regular">レジメサイト</h1>       
-</section>  
+<header>
+    <h1 class="header-text pacifico-regular">K's Gallery</h1>
+    <video src="top.mp4" autoplay loop muted></video>
+</header>
+
 <section class="prof">
-<h2>プロフィール</h2>    
+    <h2 class="pacifico-regular">Profile</h2>
+    <div class="box">
+        ここにプロフィールを書いていく。
+        色々と更新していく。
+    </div>
 </section>
 </body>
 </html>
